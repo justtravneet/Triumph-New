@@ -62,6 +62,8 @@ function Heroone() {
               </ul>
             </div>
 
+          <Link to="Triumph/shop">
+         
             <div className='inputback w-[350px] flex gap-[5px] items-center justify-between'>
               <div className='inputs '>
                 <input className='searchbar rounded-md' type="text" placeholder='Search products' />
@@ -70,6 +72,8 @@ function Heroone() {
                 <Search className=' w-[18px] ' color='#ffffff' strokeWidth={1.5} />
               </div>
             </div>
+
+          </Link>
 
 
             <div className='flex gap-[15px]'>

@@ -43,7 +43,8 @@ function App() {
                  <Route path="Triumph/Termandconditions" element={ <Termandconditions />} />
                  <Route path="Triumph/Refundpolicy" element={ <Refundpolicy />} />
                  <Route path="Triumph/Product-details" element={ <Productdetails />} />
-
+                 <Route path="Triumph/Wishlist" element={ <Wishlist/>} />
+                 <Route path="Triumph/Add-to-cart" element={ <Addtocart/>} />
                
 
             </Routes>

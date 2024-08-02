@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button} from 'antd';
-import Moreproducts from './Moreproducts';
+
 const Productdetails = () => {
 
     return (
@@ -54,8 +54,7 @@ const Productdetails = () => {
                         <div>
                             <div><p className='text-[12px] font-light sm:text-[16px]'>Ratings</p></div>
                             <div className='flex'>
-                                 <div><img className='w-[14px]' src="star.png
-                                 " alt="" /></div>
+                                 <div><img className='w-[14px]' src=" products-3.jpg" alt="" /></div>
                                  <div><img className='w-[14px]' src="star.png
                                  " alt="" /></div>
                                  <div><img className='w-[14px]' src="star.png

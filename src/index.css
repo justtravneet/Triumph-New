@@ -109,6 +109,8 @@
 .sidebtn:hover{
   transform: scale(1.1);
 }
+
+
 .exclusive{
   background: #3889F2;
 }
@@ -252,7 +254,7 @@
   align-items: center;
   justify-content: start;
 
-  
+
 }
 .getcontainer{
   border-radius: 0px 10px 10px 0px;
