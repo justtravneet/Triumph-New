@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
-const Herocards = () => {
+ const  Herocards = () => {
     const data =[
         {
             name:"Boat Heaphones",
