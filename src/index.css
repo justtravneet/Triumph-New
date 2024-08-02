@@ -1,0 +1,343 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  .contact-bg{
+    background-color: #f6f7fb;
+  }
+  .primary-bg{
+    background-color:#0554F2;
+  
+  }
+  .secondary-bg{
+    background-color:#3889F2;
+  
+  }
+
+  .primary{
+    color: #0963d8d8;
+  }
+  p{
+    font-family: "Poppins", sans-serif;
+    
+  }
+  a{
+    font-family: "Poppins", sans-serif;
+    
+  }
+  margin: 0 auto;
+  
+  sidebtn{
+      background-color: #076df2;
+  }
+}
+@media screen and (max-width:500px){
+  .desktopsearch{
+    display: none;
+  }
+  .aboutdesktop{
+    display: none;
+  }
+
+}
+@media screen and (min-width:500px){
+  .responsivesearch{
+    display: none;
+  }
+  .aboutresponsive{
+    display: none;
+  }
+}
+@media screen and (min-width:1041px){
+  .searchicon{
+    display: none;
+  }
+  
+  .slidenav{
+    display: none;
+  }
+  .menuicon{
+    display: none;
+ }
+ .slideback{
+  display: none;
+}
+.sidenav{
+  display: none;
+}
+
+
+}
+@media screen and (max-width:1040px) {
+
+ .menu{
+  display: none;
+ }
+ .inputback{
+  display: none;
+ }
+ 
+ 
+  .navback{
+    box-shadow: 0px 2px 3px rgba(173, 216, 230, 0.742);
+    
+  }
+  
+}
+.slidenav{
+  
+  border-radius: 0px 0px 10px 0px;
+  box-shadow: 0px 0px 5px 2px rgba(173, 216, 230, 0.676);
+  position: absolute;
+  z-index: 2;
+  background-color: white;
+}
+
+.intext:hover{
+  color: white;
+  background-color: #3889f290;
+   transition: 0.3s;
+}
+
+.sidebtn{
+  background:white;
+  border-radius:0px 10px 0px 10px;
+  box-shadow: 0px 3px 5px 2px lightblue;
+  transition: 0.3s;
+}
+.sidebtn:hover{
+  transform: scale(1.1);
+}
+.exclusive{
+  background: #3889F2;
+}
+.inputback{
+  border: 2px solid rgb(255, 255, 255);
+  padding:5px 6px 5px 6px;
+  width: 270px;
+  border-radius: 10px;
+}
+.searchbar{
+  width: 120px;
+  outline: none;
+  font-size: 12px;
+  color: white;
+  background-color: transparent;
+}
+
+.searchbar::placeholder{
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+
+.navback{
+  background-color: #0554F2;
+}
+.info{
+  color: white;
+  padding: 10px;
+}
+
+.banner{
+  
+  z-index: -1;
+}
+.slides{
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  
+}
+
+.prev ,.next{
+  width: 2rem;
+  justify-content: center;
+  display: flex;
+  color: white;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.addtocart-btn{
+  background-color:#3889f2d5;
+  color: white;
+  box-shadow: 0px 2px 5px 1px lightblue;
+}
+.cardback{
+  box-shadow: 0px 2px 5px 1px lightblue;
+   padding: 10px;
+}
+.banner{
+  background-color: #f2f2f2;
+}
+.ban{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footerback{
+  background-color: #0554F2;
+}
+.fade{
+  color: #f2f2f2c8;
+}
+.outdoor{
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+.images:hover{
+  background-image: url(https://www-konga-com-res.cloudinary.com/w_auto,f_auto,fl_lossy,dpr_auto,q_auto/media/catalog/product/N/a/4841_1469191371.jpg);
+}
+.pics{
+  border-radius: 10px 10px 10px 10px;
+}
+.cardsback{
+  margin-top: 30px;
+  background-color: #076df2;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.189);
+}
+.imgborder{
+  border-radius: 10px 10px 0px 0px ;
+}
+
+.addbtn{
+  padding: 2px 6px 2px 6px;
+  background-color:black;
+  color: white;
+}
+.card-backs{
+  overflow-x: scroll;
+}
+.card-conatiner{
+  box-shadow: 1px 1px 10px 2px rgba(0, 0, 0, 0.142);
+  transition: 0.3s;
+  border-radius: 10px 10px 10px 10px;
+}
+.card-conatiner:hover{
+  box-shadow: 1px 2px 25px 2px rgba(0, 0, 0, 0.374);
+ 
+}
+.button{
+  background-color: #076df2;
+  border-radius: 0px 0px 10px 10px;
+ 
+}
+.button button{
+  transition: 0.5s;
+}
+.button button p:hover{
+  transform: scale(1.2);
+}
+
+
+.class-imageholder{
+  object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
+}
+.class-imageholder img:hover{
+  object-fit: cover;
+  
+}
+
+.firstdiv{
+  border-radius: 10px 0px 0px 10px;
+}
+.seconddiv{
+  border-radius: 0px 10px 10px 0px;
+}
+
+.getintouch{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+
+  
+}
+.getcontainer{
+  border-radius: 0px 10px 10px 0px;
+  box-shadow: 1px 2px 10px 1px lightblue;
+}
+.touchcontainer{
+  box-shadow: 1px 1px 10px 2px lightblue;
+}
+.filterpanel{
+ 
+  border-right: 1px solid rgba(0, 0, 0, 0.135);
+}
+.responsivesearch {
+  background-color: white;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.121);
+  border-radius: 10px;
+}
+.desktopsearch {
+  background-color: white;
+  box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, 0.121);
+  border-radius: 10px;
+}
+.filtersres{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.897);
+}
+.filterbutton{
+  border: 1px solid rgba(0, 0, 0, 0.276);
+  border-radius: 5px;
+}
+.dropdown{
+  width: 70px;
+  height: 100px;
+  margin-left: 15px;
+  background-color: brown;
+  margin-top: -5px;
+  border-radius: 5px;
+}
+.aboutdesktop{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.addtocartback{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartimage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cartsback{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.267);
+  
+}
+.cart-conatiner{
+  margin-top: 20px;
+  background-color: rgba(255, 255, 255, 0.696);
+  box-shadow: 0px 1px 15px 2px lightblue;
+  border-radius: 10px;
+}
+.cart-images{
+  border-radius: 15px 15px 0px 0px;
+}
+.cardconatiner-back{
+  border-radius: 15px;
+  box-shadow: 1px 1px 15px 2px lightblue;
+}
+
+
+.infoss:hover{
+  color: rgb(140, 255, 0);
+  transition: 0.3s;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selector-image{
+  box-shadow: 1px 2px 25px 1px rgba(173, 216, 230, 0.806);
+  border-radius: 10px;
+}
