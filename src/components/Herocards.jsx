@@ -3,47 +3,47 @@ import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
  const  Herocards = () => {
     const data =[
         {
-            name:"Boat Heaphones",
+            name:"Square Panel Light",
             title:"Rounded surface with SOFT CUSHIONS",
             image:"https://i.pinimg.com/originals/9e/e0/ed/9ee0ed3fd1380ccd7ded429b56c1d8b3.jpg",
-            price:"Rs.000/-",   
+            price:"Rs.250/-",   
         },
         {
-            name:"Boat Heaphones",
+            name:"Ball Light",
             title:"Rounded surface with SOFT CUSHIONS",
             image:"https://i.pinimg.com/originals/9e/e0/ed/9ee0ed3fd1380ccd7ded429b56c1d8b3.jpg",
-            price:"Rs.000/-",   
+            price:"Rs.220/-",   
         },
 
         {
-            name:"Boat Heaphones",
+            name:"Down Wall Light",
             title:"Rounded surface with SOFT CUSHIONS",
             image:"https://i.pinimg.com/originals/9e/e0/ed/9ee0ed3fd1380ccd7ded429b56c1d8b3.jpg",
-            price:"Rs.000/-",   
+            price:"Rs.340/-",   
         },
         {
-            name:"Boat Heaphones",
+            name:"Cylindrical Cob Light",
             title:"Rounded surface with SOFT CUSHIONS",
             image:"https://i.pinimg.com/originals/9e/e0/ed/9ee0ed3fd1380ccd7ded429b56c1d8b3.jpg",
-            price:"Rs.000/-",   
+            price:"Rs.550/-",   
         },
         {
-            name:"Boat Heaphones",
+            name:"Led Deep Cob Light",
             title:"Rounded surface with SOFT CUSHIONS",
             image:"https://i.pinimg.com/originals/9e/e0/ed/9ee0ed3fd1380ccd7ded429b56c1d8b3.jpg",
-            price:"Rs.000/-",   
+            price:"Rs.220/-",   
         },
         {
-            name:"Boat Heaphones",
+            name:"Down Wall Light",
             title:"Rounded surface with SOFT CUSHIONS",
             image:"https://i.pinimg.com/originals/9e/e0/ed/9ee0ed3fd1380ccd7ded429b56c1d8b3.jpg",
-            price:"Rs.000/-",   
+            price:"Rs.499/-",   
         },
         {
-            name:"Boat Heaphones",
+            name:"Ball Light",
             title:"Rounded surface with SOFT CUSHIONS",
             image:"https://i.pinimg.com/originals/9e/e0/ed/9ee0ed3fd1380ccd7ded429b56c1d8b3.jpg",
-            price:"Rs.000/-",   
+            price:"Rs.655/-",   
         },
         
     ]
