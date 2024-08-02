@@ -4,6 +4,7 @@ import Moreproducts from './Moreproducts';
 const Productdetails = () => {
 
     return (
+        
         <div className='flex-col xl:justify-center px-[10px] py-[5px] sm:px-[25px] sm:py-[5px] md:px-[35px] lg:px-[65px] xl:px-[100px] 2xl:justify-center 2xl:gap-[100px] flex items-center justify-between'>
             <div className=' flex w-[100%] h-[260px] sm:h-[340px] lg:h-[400px] xl:w-[1000px] 2xl:w-[1200px] selector-image mt-[30px] mb-[30px] '>
                 <div className='w-[50%] h-[260px] sm:h-[340px] lg:h-[400px]  ' >
