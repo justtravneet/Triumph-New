@@ -1,11 +1,20 @@
 import React from 'react'
-import { Button} from 'antd';
+
+import Modal from './Modal';
 
 const Productdetails = () => {
 
     return (
         
         <div className='flex-col xl:justify-center px-[10px] py-[5px] sm:px-[25px] sm:py-[5px] md:px-[35px] lg:px-[65px] xl:px-[100px] 2xl:justify-center 2xl:gap-[100px] flex items-center justify-between'>
+             
+             {/* <div>
+                  <div>
+                     <Modal />
+                  </div>
+             </div> */}
+            
+            
             <div className=' flex w-[100%] h-[260px] sm:h-[340px] lg:h-[400px] xl:w-[1000px] 2xl:w-[1200px] selector-image mt-[30px] mb-[30px] '>
                 <div className='w-[50%] h-[260px] sm:h-[340px] lg:h-[400px]  ' >
                     <div className=' w-[100%] h-[200px] sm:h-[250px] lg:h-[300px] p-1 flex justify-center items-center py-[10px]'>
@@ -70,8 +79,9 @@ const Productdetails = () => {
                         </div>
 
                         <div className='flex flex-col gap-[5px]'>
-                          <Button className='h-[22px] sm:h-[30px] text-[12px]' type="primary"><p>Add To Cart</p></Button>
-                          <Button className='h-[22px] text-[12px]  sm:h-[30px]' type="primary"><p>Buy Now</p></Button>
+                          <button className='rounded-lg secondary-bg h-[22px] text-white sm:h-[30px] text-[12px]' ><p>Add To Cart</p></button>
+
+                          <button className='h-[22px] rounded-lg secondary-bg text-white  text-[12px]  sm:h-[30px]' ><p>Buy Now</p></button>
                         </div>
 
                         

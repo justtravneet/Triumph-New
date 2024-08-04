@@ -3,15 +3,6 @@ import { Button, Flex } from 'antd';
 const Wishlist = () => {
 
 
-     let [count, setCount] = useState(0);
-     function incrementCount() {
-          count = count + 1;
-          setCount(count);
-     }
-     function decrementCount() {
-          count = count - 1;
-          setCount(count);
-     }
      return (
           <div className='  px-[10px] py-[5px] sm:px-[25px] lg:flex lg:justify-center sm:py-[5px] md:px-[35px] lg:px-[65px] xl:px-[100px] 2xl:justify-center 2xl:gap-[100px]'>
                

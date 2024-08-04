@@ -14,6 +14,7 @@ import Productdetails from './components/Productdetails';
 import Privacy from './pages/Privacy';
 import Termandconditions from './pages/Termandconditions';
 import Refundpolicy from './pages/Refundpolicy';
+import Adminpanel from './pages/Adminpanel';
 
 
 
@@ -45,6 +46,7 @@ function App() {
                  <Route path="Triumph/Product-details" element={ <Productdetails />} />
                  <Route path="Triumph/Wishlist" element={ <Wishlist/>} />
                  <Route path="Triumph/Add-to-cart" element={ <Addtocart/>} />
+                 <Route path="Triumph/Admin-panel" element={ <Adminpanel />} />
                
 
             </Routes>

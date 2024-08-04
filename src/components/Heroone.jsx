@@ -32,6 +32,7 @@ function Heroone() {
   return (
     <div >
       {/* Exclusive */}
+    <Link to="/Triumph/Admin-panel">
       <div className='exclusive  flex items-center justify-center gap-[2px] py-[3px] md:gap-[4px] md:py-[3px]  '>
         <div>
           <Megaphone size={25} strokeWidth={1.5} color="#fcf8f8" />
@@ -40,6 +41,7 @@ function Heroone() {
           <p className='text-[14px] text-white'>Get exclusive deals upto <span className=' font-semibold'>25%</span> </p>
         </div>
       </div>
+    </Link>
 
       {/* navbar */}
 
@@ -62,26 +64,26 @@ function Heroone() {
               </ul>
             </div>
 
-          <Link to="Triumph/shop">
          
-            <div className='inputback w-[350px] flex gap-[5px] items-center justify-between'>
-              <div className='inputs '>
-                <input className='searchbar rounded-md' type="text" placeholder='Search products' />
+         
+           
+
+          
+
+
+            <div className='flex gap-[14px]'>
+               <div>
+               <Link to="/Triumph/shop">
+                <Search className=' w-[25px] ' color='#ffffff' strokeWidth={1.5} />
+               </Link>
+                
               </div>
+              
               <div>
-                <Search className=' w-[18px] ' color='#ffffff' strokeWidth={1.5} />
-              </div>
-            </div>
-
-          </Link>
-
-
-            <div className='flex gap-[15px]'>
-              <div className='searchicon'>
-                <Link to="/Triumph/shop"> <Search className='w-[25px] sm:w-[30px] lg:w-[35px]' color='#ffffff' strokeWidth={1.5} /> </Link>
-              </div>
-              <div>
-              <Link to="/Triumph/Wishlist"><Heart className='w-[25px] sm:w-[30px] lg:w-[35px] xl:w-[45px]' color='#ffffff' strokeWidth={1.5} /></Link> 
+                    <Link to="/Triumph/Wishlist"><Heart className='w-[25px] sm:w-[30px] lg:w-[35px] xl:w-[45px]' color='#ffffff' strokeWidth={1.5} /></Link> 
+                   <span className=''>
+                      <p className=' bg-white primary w-[12px]  h-[12px] text-center text-[10px] rounded-xl  mt-[-26px]  ml-[15px] sm:ml-[18px]  lg:ml-[22px] xl:ml-[25px] '>2</p>
+                   </span>
               </div>
               <div>
               <Link to="/Triumph/Add-to-cart"><ShoppingBag className='w-[25px] sm:w-[30px] lg:w-[35px] xl:w-[45px]' color='#ffffff' strokeWidth={1.5} /></Link>  

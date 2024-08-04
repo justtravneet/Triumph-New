@@ -1,8 +1,55 @@
 import React, { useState } from 'react'
-import { Button, Flex } from 'antd';
-const Addtocart = () => {
+import { UserOutlined } from '@ant-design/icons';
+import { Input } from 'antd';
+const  Addtocart = () => {
 
+     const[showmodal,setshowmodal]=useState(false)
 
+     const Mymodal=() =>{
+          return(
+               <div className='fixed inset-0   bg-white bg-opacity-30 backdrop-blur-sm'>
+               <div className='modal-back'>
+                   <div className='modal-conatiner text-center w-[200px] h-[auto] sm:w-[250px]   bg-slate-400'>
+                      
+                       <div className='flex secondary-bg   p-2  justify-between'>
+                             <div>
+                                <p className='text-[20px] text-white'>Login</p>
+                             </div>
+
+                             <div>
+                              <button onClick={()=> setshowmodal(false)} className='text-white text-[20px]' ><p className='text-[12px]'>X</p></button>  
+                             </div>
+                       </div>
+
+                       <div className='secondary-bg py-[10px]'>
+                           <div className='p-2 flex flex-col gap-[8px]'>
+                              <div className='flex flex-col  text-left'>
+                                  <label htmlFor=""><p className='text-[12px] text-white  font-light'>Email</p></label>
+                                  <Input placeholder="Enter Email" className='w-[]' prefix={<UserOutlined />} />
+                              </div>
+                              <div className='flex flex-col  text-left'>
+                                  <label htmlFor=""><p className='text-[12px] text-white font-light'>Otp</p></label>
+                                  <Input placeholder="Enter Otp" className='w-[]'/>
+                              </div>
+
+                              
+
+                              
+                                 
+                           </div>
+                       </div>
+                        
+                     
+                         
+                    
+                   </div>
+               </div>
+          </div>
+          )
+     }
+
+    
+    
      let [count, setCount] = useState(0);
      function incrementCount() {
           count = count + 1;
@@ -12,14 +59,19 @@ const Addtocart = () => {
           count = count - 1;
           setCount(count);
      }
+
      return (
           <div className='  px-[10px] py-[5px] sm:px-[25px] lg:flex lg:justify-center sm:py-[5px] md:px-[35px] lg:px-[65px] xl:px-[100px] 2xl:justify-center 2xl:gap-[100px]'>
-               
+               <div>
+                    <div>
+                        {showmodal && <Mymodal/>}
+                    </div>
+               </div>
 
-               <div className=' cart-conatiner h-[450px]  flex justify-between flex-col lg:w-[80%] 2xl:w-[1200px] p-4 md:p-8 '>
+               <div className=' cart-conatiner h-[450px]  flex  flex-col lg:w-[80%] 2xl:w-[1200px] p-4 md:p-8 '>
 
                 <div className='py-[5px] h-[50px] md:flex md:justify-center'>
-                         <div className='md:w-[80%]'> <p className='text-[18px] font-semibold'>Shopping Cart</p></div>
+                         <div className='md:w-[80%]'> <p className='text-[18px] font-semibold'>Shopping Cart !</p></div>
                           
                 </div>
                  <div className=' flex flex-col h-[300px] py-[10px]'>
@@ -43,15 +95,15 @@ const Addtocart = () => {
                               </div>
 
                               <div className='px-[5px] flex flex-col  justify-between'>
-                                   <div className='flex gap-[2px] items-center justify-center'>
-                                        <div><button onClick={decrementCount}><p>-</p></button> </div>
-                                        <div><p className='text-[14px]'>{count}</p></div>
-                                        <div><button onClick={incrementCount}> <p>+</p></button></div>
-                                   </div>
-
+                                  
                                    <div className=' '>
                                         <p className='text-[14px]'>Rs.999/</p>
                                    </div>
+                                   <div className='flex gap-[2px] items-center justify-center'>
+                                                  <div><button onClick={decrementCount}><p>-</p></button> </div>
+                                                  <div><p className='text-[14px]'>{count}</p></div>
+                                                  <div><button onClick={incrementCount}> <p>+</p></button></div>
+                                             </div>
 
                                    <div className='flex justify-center'>
                                         <div><button><p><img className='w-[15px]' src="trashimg.png" alt="" /></p></button></div>
@@ -64,12 +116,14 @@ const Addtocart = () => {
      
                  </div>
 
-                  <div className='md:justify-center md:flex'> 
-                    <div className='w-[100%] md:w-[80%]'>
-                       <Button className='w-[100%]' type="primary"> <p>Proceed To Pay</p></Button>
-                    </div>
+                 <div className='md:justify-center md:flex'>
+                              <div className='w-[100%] md:w-[80%]'>
+                                   <button onClick={()=> setshowmodal(true)} className='rounded-lg py-[8px] secondary-bg text-white w-[100%]' type="primary"> <p>Proceed To Pay</p></button>
+                             </div>
 
-                  </div>
+                         </div>
+
+                  
                    
                </div>
           </div>
