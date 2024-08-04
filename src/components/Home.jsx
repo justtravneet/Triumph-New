@@ -9,7 +9,7 @@ import Herocardtwo from './Herocardtwo'
 const Home = () => {
   return (
     <div>
-         <Herothree />
+         {/* <Herothree /> */}
          <Herocards />
          <Herocardtwo />
          <Heroflex />

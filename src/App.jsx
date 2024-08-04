@@ -35,19 +35,8 @@ function App() {
             <Routes>
                 
                 
-                 <Route path="/Triumph-New/" element={ <Home />} />
-                 <Route path="/" element={ <Home />} />
-                 <Route path="Triumph/Shop" element={ <Search />} />
-                 <Route path="Triumph/Contact-us" element={ <Contactus />} />
-                 <Route path="Triumph/About-us" element={ <About/>} />
-                 <Route path="Triumph/Privacy-Policy" element={ <Privacy />} />
-                 <Route path="Triumph/Termandconditions" element={ <Termandconditions />} />
-                 <Route path="Triumph/Refundpolicy" element={ <Refundpolicy />} />
-                 <Route path="Triumph/Product-details" element={ <Productdetails />} />
-                 <Route path="Triumph/Wishlist" element={ <Wishlist/>} />
-                 <Route path="Triumph/Add-to-cart" element={ <Addtocart/>} />
-                 <Route path="Triumph/Admin-panel" element={ <Adminpanel />} />
-               
+                 
+                 
 
             </Routes>
             
