@@ -55,10 +55,10 @@ import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
             </div>
              <div className='card-backs 2xl:w-[1200px]  flex 2xl:justify-center pl-[5px] py-[20px] gap-[15px]'>
                    {data.map((d) => (
-                      <Link to="Triumph/Product-details">
+                      <Link to="/products/item">
                         <div className='card-conatiner  w-[150px] h-[280px] lg:w-[190px] lg:h-[350px] bg-slate-100 flex flex-col justify-between'>
                             
-                             <Link to="Triumph/Product-details" className="group   ">
+                             <Link to="/products/item" className="group   ">
                                  <div className="  overflow-hidden class-imageholder bg-slate-500 ">
                                      <div className='w-[150px] h-[150px] lg:w-[190px] lg:h-[190px] pt-[-10px]'>
                                         <img 

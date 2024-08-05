@@ -2,7 +2,7 @@ import React from 'react'
 import { Select, Space } from 'antd';
 import { Input } from 'antd';
 import { Button } from 'antd';
-
+import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
 const Search = () => {
 
     const data = [
@@ -102,13 +102,17 @@ const Search = () => {
 
 
                 <div className='search-card-back h-[auto] w-[100%] flex justify-center  gap-[15px]  flex-wrap   p-3'>
+                  <Link to="/products/item">
                     {data.map((d) => (
-
                         <div className='cardconatiner-back  w-[150px] h-[auto] '>
                             <div className='card-image-back w-[150px] h-[50px]'>
+                           
+                            
                                 <div className='card-images w-[150px] h-[50px]'>
                                     <img className='hoverimages cart-images' src={d.image} alt="" />
                                 </div>
+
+                                
                             </div>
                             <div className='info-back w-[150px] h-[90px] mt-[110px]   flex justify-between flex-col '>
                                 <div className='information w-[150px]  h-[90px] flex flex-col p-2'>
@@ -132,10 +136,8 @@ const Search = () => {
 
 
                         </div>
-
-
-
                     ))}
+                </Link> 
 
                 </div>
 
