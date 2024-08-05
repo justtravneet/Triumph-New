@@ -355,6 +355,8 @@
   align-items: center;
 }
 
-.underline{
- 
+.notify{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

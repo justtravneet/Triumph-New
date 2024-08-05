@@ -57,9 +57,9 @@ function Heroone() {
             <div className='menu flex-col'>
               <ul className='flex  gap-[25px]  mr-[0px]  tracking-wider'>
                 <Link to="/"> <li><a href="http://" className='info text-[16px] '> <p className='infoss'>Home</p></a></li></Link>
-                <Link to="/Triumph/shop"> <li><a href="http://" className='info text-[16px]'> <p className='infoss'>Shop</p></a></li></Link>
-                <Link to="/Triumph/Contact-us"><li><a href="http://" className='info text-[16px] '> <p className='infoss'>Contact Us</p></a></li></Link>
-                <Link to="/Triumph/About-us"><li><a href="http://" className='info text-[16px] '> <p className='infoss'>About Us</p></a></li></Link>
+                <Link to="/shop"> <li><a href="http://" className='info text-[16px]'> <p className='infoss'>Shop</p></a></li></Link>
+                <Link to=""><li><a href="http://" className='info text-[16px] '> <p className='infoss'>Contact Us</p></a></li></Link>
+                <Link to=""><li><a href="http://" className='info text-[16px] '> <p className='infoss'>About Us</p></a></li></Link>
 
               </ul>
             </div>
@@ -73,20 +73,20 @@ function Heroone() {
 
             <div className='flex gap-[14px]'>
                <div>
-               <Link to="/Triumph/shop">
+               <Link to="">
                 <Search className=' w-[25px] ' color='#ffffff' strokeWidth={1.5} />
                </Link>
                 
               </div>
               
               <div>
-                    <Link to="/Triumph/Wishlist"><Heart className='w-[25px] sm:w-[30px] lg:w-[35px] xl:w-[45px]' color='#ffffff' strokeWidth={1.5} /></Link> 
+                    <Link to=""><Heart className='w-[25px] sm:w-[30px] lg:w-[35px] xl:w-[45px]' color='#ffffff' strokeWidth={1.5} /></Link> 
                    <span className=''>
-                      <p className=' bg-white primary w-[12px]  h-[12px] text-center text-[10px] rounded-xl  mt-[-26px]  ml-[15px] sm:ml-[18px]  lg:ml-[22px] xl:ml-[25px] '>2</p>
+                      <p className=' notify bg-white primary  w-[12px]  h-[12px] text-center text-[10px] rounded-xl  mt-[-26px]  ml-[15px] sm:ml-[18px]  lg:ml-[22px] xl:ml-[25px] '>2</p>
                    </span>
               </div>
               <div>
-              <Link to="/Triumph/Add-to-cart"><ShoppingBag className='w-[25px] sm:w-[30px] lg:w-[35px] xl:w-[45px]' color='#ffffff' strokeWidth={1.5} /></Link>  
+              <Link to=""><ShoppingBag className='w-[25px] sm:w-[30px] lg:w-[35px] xl:w-[45px]' color='#ffffff' strokeWidth={1.5} /></Link>  
               </div>
 
               <div className='menuicon ' onClick={handleOpenSidebar}   >
@@ -128,21 +128,21 @@ function Heroone() {
             </div>
 
             <div className='intext px-[20px] sm:px-[30px]   py-[10px] border '>
-               <Link className='flex justify-between ' to="/Triumph/shop">
+               <Link className='flex justify-between ' to="/shop">
                   <div><p className=''>Shop</p></div>
                   <div><ChevronRight /></div>
                </Link>
             </div>
 
             <div className='intext px-[20px] sm:px-[30px]   py-[10px] border '>
-               <Link className='flex justify-between ' to="/Triumph/Contact-us">
+               <Link className='flex justify-between ' to="">
                   <div><p className=''>Contact Us</p></div>
                   <div><ChevronRight /></div>
                </Link>
             </div>
 
             <div className='intext px-[20px] sm:px-[30px]   py-[10px] border '>
-               <Link className='flex justify-between ' to="/Triumph/About-us">
+               <Link className='flex justify-between ' to="">
                   <div><p className=''>About Us</p></div>
                   <div><ChevronRight /></div>
                </Link>
