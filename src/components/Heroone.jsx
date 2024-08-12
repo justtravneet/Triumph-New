@@ -32,7 +32,7 @@ function Heroone() {
   return (
     <div >
       {/* Exclusive */}
-    <Link to="/admin-panel">
+    <Link >
       <div className='exclusive  flex items-center justify-center gap-[2px] py-[3px] md:gap-[4px] md:py-[3px]  '>
         <div>
           <Megaphone size={25} strokeWidth={1.5} color="#fcf8f8" />

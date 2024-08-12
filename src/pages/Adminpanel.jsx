@@ -1,7 +1,63 @@
-import React from 'react'
-import { User, Bell} from 'lucide-react'
+import { React, useEffect, useState } from 'react'
+import { User, Bell } from 'lucide-react'
 import { Button, } from 'antd';
-const Adminpanel = () => {
+import axios from 'axios';
+
+
+
+
+function Adminpanel() {
+
+   
+    
+
+
+    
+
+
+
+
+
+
+
+
+//    CATEGORY INPUT
+    const [categoryName, setCategoryName] = useState('');
+    const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZjQ1YTdjZjUtOWU3Zi00ZGE3LTg0N2YtYmY5MWM3NmQyMmZmIiwiaWF0IjoxNzIzMjE4NDczfQ.rxvHj9hUMGJ3wh2SQ4k_C_NyAjqj2QHAahCvnyeeil8'; // Ensure this is correct and not expired
+
+    console.log({ categoryName })
+
+    const handleSubmit = (e) => {
+        setCategoryName(e.target.value)
+    }
+
+
+    const handleapi = async (e) => {
+        e.preventDefault();
+        const result = await axios.post('https://e-commerce-backend-2ndq.onrender.com/api/v1/product/create/category', {
+
+            name: categoryName,
+
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token} `
+
+            }
+        })
+        console.log(result)
+        // .then(response => console.log(response ,"Category Created"))
+        // .catch(err => console.log(err, "Category Not Created"))
+
+
+
+        console.log({ categoryName })
+    }
+
+
+
+
+
     return (
         <div className=' flex justify-center  '>
 
@@ -115,6 +171,55 @@ const Adminpanel = () => {
 
                             <div className=' bg-slate-300 py-[10px] w-[100%] rounded-lg p-2 flex flex-wrap  lg:justify-center  gap-[10px] '>
                                 <div className='flex gap-[4px] items-center'>
+                                    <div>
+                                        <p className='text-[12px] md:text-[15px]'>Category</p>
+                                        <div className='flex gap-[3px]'>
+                                            <div>
+                                                <input
+                                                    onChange={handleSubmit}
+                                                    value={categoryName}
+                                                    className=' text-[10px] px-[5px] md:text-[12px] rounded-md border-2 ' type="text" placeholder='Name' />
+                                            </div>
+
+                                            <div>
+                                                <Button onClick={handleapi} type="primary" size={5}>
+                                                    Primary
+                                                </Button>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+                                    <div>
+                                        <p className='text-[12px] md:text-[15px]'>Create New Product</p>
+
+                                        <div className='flex gap-[3px]'>
+                                            <div>
+                                                
+
+                                            </div>
+
+                                            <div>
+                                                <Button type="primary" size={5}>
+                                                    Primary
+                                                </Button>
+                                            </div>
+                                        </div>
+
+
+
+
+                                    </div>
+
+                                </div>
+
+
+                                {/* <div className='flex gap-[4px] items-center'>
                                     <p className='text-[12px] md:text-[15px]'>Product Image</p>
                                     <input className=' text-[10px] md:text-[12px]' type="file" />
                                 </div>
@@ -140,8 +245,8 @@ const Adminpanel = () => {
                                 </div>
 
                                 <div>
-                                   <Button className='w-[100px] h-[25px] text-[10px]' type="primary">Add New Product</Button>
-                                </div>
+                                    <Button className='w-[100px] h-[25px] text-[10px]' type="primary">Add New Product</Button>
+                                </div> */}
                             </div>
 
                         </div>
@@ -159,9 +264,9 @@ const Adminpanel = () => {
 
                         <div>
 
-                          
 
-                           
+
+
 
                         </div>
 

@@ -3,12 +3,16 @@ import { Input } from 'antd';
 import Herocounter from './Herocounter';
 import { Button } from 'antd';
 import Herocards from './Herocards';
+import Heroone from './Heroone';
+import Herolast from './Herolast';
 
 const Contactus = () => {
     const { TextArea } = Input;
     return (
         <div>
-
+            <div>
+                <Heroone />
+            </div>
         
 
         <div  className='flex justify-center  px-[10px] py-[5px] sm:px-[25px] sm:py-[5px] md:px-[35px] lg:px-[65px] xl:px-[100px] 2xl:justify-center 2xl:gap-[100px] '>
@@ -86,7 +90,9 @@ const Contactus = () => {
         <div> <Herocounter /> </div>
 
 
-
+         <div>
+            <Herolast />
+         </div>
         </div>
     )
 }

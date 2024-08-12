@@ -1,9 +1,19 @@
 import React, { useState } from 'react'
 import { Button, Flex } from 'antd';
+import Heroone from './Heroone';
+import Herolast from './Herolast';
 const Wishlist = () => {
 
 
      return (
+
+       <div>
+         
+
+         <div>
+            <Heroone />
+         </div>
+          
           <div className='  px-[10px] py-[5px] sm:px-[25px] lg:flex lg:justify-center sm:py-[5px] md:px-[35px] lg:px-[65px] xl:px-[100px] 2xl:justify-center 2xl:gap-[100px]'>
                
 
@@ -54,6 +64,12 @@ const Wishlist = () => {
                    
                </div>
           </div>
+
+          <div>
+               <Herolast />
+          </div>
+
+      </div>
      )
 }
 

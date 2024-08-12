@@ -3,6 +3,8 @@ import { Select, Space } from 'antd';
 import { Input } from 'antd';
 import { Button } from 'antd';
 import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
+import Heroone from './Heroone';
+import Herolast from './Herolast';
 const Search = () => {
 
     const data = [
@@ -57,6 +59,14 @@ const Search = () => {
 
 
     return (
+
+       <div>
+        
+        <div>
+            <Heroone />
+        </div>
+       
+     
         <div className='  px-[10px] py-[5px] sm:px-[25px] sm:py-[5px] md:px-[35px] lg:px-[65px] xl:px-[100px] xl:justify-center flex 2xl:justify-center 2xl:gap-[100px]'>
             <div className='responsivesearch  w-[700px] md:w-[1000px] lg:w-[1200px] h-[auto]  bg-slate-100'>
 
@@ -231,6 +241,12 @@ const Search = () => {
                 </div>
             </div>
         </div>
+
+        <div>
+            <Herolast />
+        </div>
+
+      </div>  
     )
 }
 

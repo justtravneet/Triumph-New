@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
-import { UserOutlined } from '@ant-design/icons';
-import { Input } from 'antd';
+
+import Login from './Login';
+import Heroone from './Heroone';
+import Herolast from './Herolast';
 const  Addtocart = () => {
 
      const[showmodal,setshowmodal]=useState(false)
@@ -9,9 +11,9 @@ const  Addtocart = () => {
           return(
                <div className='fixed inset-0   bg-white bg-opacity-30 backdrop-blur-sm'>
                <div className='modal-back'>
-                   <div className='modal-conatiner text-center w-[200px] h-[auto] sm:w-[250px]   bg-slate-400'>
+                   <div className='modal-conatiner text-center w-[250px] h-[auto]  sm:w-[300px]    '>
                       
-                       <div className='flex secondary-bg   p-2  justify-between'>
+                       <div className='flex secondary-bg   p-4  justify-between'>
                              <div>
                                 <p className='text-[20px] text-white'>Login</p>
                              </div>
@@ -22,20 +24,8 @@ const  Addtocart = () => {
                        </div>
 
                        <div className='secondary-bg py-[10px]'>
-                           <div className='p-2 flex flex-col gap-[8px]'>
-                              <div className='flex flex-col  text-left'>
-                                  <label htmlFor=""><p className='text-[12px] text-white  font-light'>Email</p></label>
-                                  <Input placeholder="Enter Email" className='w-[]' prefix={<UserOutlined />} />
-                              </div>
-                              <div className='flex flex-col  text-left'>
-                                  <label htmlFor=""><p className='text-[12px] text-white font-light'>Otp</p></label>
-                                  <Input placeholder="Enter Otp" className='w-[]'/>
-                              </div>
-
-                              
-
-                              
-                                 
+                           <div>
+                               <Login />
                            </div>
                        </div>
                         
@@ -61,6 +51,13 @@ const  Addtocart = () => {
      }
 
      return (
+
+       <div>
+           
+           <div>
+               <Heroone />
+           </div>
+        
           <div className='  px-[10px] py-[5px] sm:px-[25px] lg:flex lg:justify-center sm:py-[5px] md:px-[35px] lg:px-[65px] xl:px-[100px] 2xl:justify-center 2xl:gap-[100px]'>
                <div>
                     <div>
@@ -127,6 +124,12 @@ const  Addtocart = () => {
                    
                </div>
           </div>
+
+          <div>
+               <Herolast />
+          </div>
+
+       </div> 
      )
 }
 

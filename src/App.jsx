@@ -13,6 +13,8 @@ import Wishlist from './components/Wishlist';
 import Addtocart from './components/Addtocart';
 import Adminpanel from './pages/Adminpanel';
 import Productsdetails from './pages/Productdetails';
+import Adminsignup from './pages/Adminsignup';
+import Adminlogin from './pages/Adminlogin';
 
 
 
@@ -28,7 +30,7 @@ function App() {
     <> 
       
       <BrowserRouter>
-         <Heroone />
+        
          
             <Routes>
                 
@@ -43,6 +45,8 @@ function App() {
                <Route path='/add-to-cart' element={ <Addtocart/> } />
 
                <Route path='/admin-panel' element={<Adminpanel /> } />
+               <Route path='/admin-signup' element={<Adminsignup /> } />
+               <Route path='/admin-login' element={<Adminlogin /> } />
               
                   
                
@@ -51,7 +55,7 @@ function App() {
 
             </Routes>
             
-         <Herolast />
+      
       </BrowserRouter>
      
       

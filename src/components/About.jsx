@@ -1,10 +1,16 @@
 import React from 'react'
 import { motion, useScroll } from "framer-motion";
+import Heroone from './Heroone';
+import Herolast from './Herolast';
 const About = () => {
     const { scrollYProgress } = useScroll();
 
     return (
         <div>
+
+            <div>
+                <Heroone />
+            </div>
             <div className=' flex justify-center  px-[10px] sm:px-[25px]  md:px-[35px] lg:px-[65px] xl:px-[100px] 2xl:justify-center 2xl:gap-[100px]  '>
                  <div className='py-[20px] md:py-[20px]'>
                       <motion.img 
@@ -135,8 +141,10 @@ const About = () => {
             </div>
 
 
-
-
+ 
+          <div>
+            <Herolast />
+          </div>
 
         </div>
     )
