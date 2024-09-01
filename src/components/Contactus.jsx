@@ -2,7 +2,7 @@ import React from 'react'
 import { Input } from 'antd';
 import Herocounter from './Herocounter';
 import { Button } from 'antd';
-import Herocards from './Herocards';
+import Herocards from './HomPage/Herocards';
 import Heroone from './Heroone';
 import Herolast from './Herolast';
 

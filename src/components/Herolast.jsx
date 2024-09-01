@@ -54,15 +54,15 @@ const Herolast = () => {
 
                          <div className='mt-[8px]'>
                              <ul className='flex flex-col gap-[3px] '>
-                                 <Link to="/Triumph/Termandconditions">
+                                 <Link to="/terms-and-conditions">
                                  <li className='fade text-[9px] sm:text-[11px]  md:text-[13px] lg:text-[15px] text-white'><a href="http://">Term and Conditions</a></li>
                                  </Link>
                               
-                                 <Link to="/Triumph/Privacy-Policy">
+                                 <Link to="/privacy-policy">
                                  <li className='fade text-[9px] sm:text-[11px]  md:text-[13px] lg:text-[15px] text-white'><a href="http://">Privacy Policy</a></li>
                                  </Link>
 
-                                 <Link to="/Triumph/Refundpolicy">
+                                 <Link to="/refund-policy">
                                  <li className='fade text-[9px] sm:text-[11px]  md:text-[13px]  lg:text-[15px] text-white'><a href="http://">Refund Policy</a></li>
                                  </Link>
                                  

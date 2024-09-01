@@ -1,143 +1,126 @@
-import { React, useState } from "react"
-import Login from "../components/Login"
-import Heroone from "../components/Heroone"
-import Herolast from "../components/Herolast"
+import React, { useEffect, useState } from "react";
+import Heroone from "../components/Heroone";
+import Herolast from "../components/Herolast";
+import { useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
+import ProductInfo from "../components/ProductDetails/ProductInfo";
 
+import MoreInfo from "../components/ProductDetails/MoreInfo";
+
+import LoginModal from "../components/general/LoginModal";
+import Cookies from 'js-cookie';
+import { checkLogin } from "../utils/checkLogin";
+import ProductInfoSkeleton from "../components/Loaders/ProductInfoSkeleton";
+import MoreInfoSkeleton from "../components/Loaders/MoreInfoSkeleton";
+import SkeletonLoader from "../components/Loaders/SkeletonLoader";
+
+
+const apiUrl = import.meta.env.VITE_URL;
 
 const Productdetails = () => {
-    const [showmodal, setshowmodal] = useState(false)
+    const navigate = useNavigate();
+    const [showModal, setShowModal] = useState(false);
+    const [product, setProduct] = useState(null);
+    const { product_id } = useParams();
+    const [selectedImage, setSelectedImage] = useState("");
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [loading, setLoading] = useState(true);
 
-    const Mymodal = () => {
-        return (
-            <div className='fixed inset-0   bg-white bg-opacity-30 backdrop-blur-sm'>
-                <div className='modal-back'>
-                    <div className='modal-conatiner text-center w-[200px] h-[auto] sm:w-[250px]   bg-slate-400'>
+    useEffect(() => {
+        const login = checkLogin();
+        setIsLoggedIn(login);
+    }, []);
 
-                        <div className='flex secondary-bg   p-2  justify-between'>
-                            <div>
-                                <p className='text-[20px] text-white'>Login</p>
-                            </div>
-
-                            <div>
-                                <button onClick={() => setshowmodal(false)} className='text-white text-[20px]' ><p className='text-[12px]'>X</p></button>
-                            </div>
-                        </div>
-
-                        <div className='secondary-bg py-[10px]'>
-                            <div>
-                                 <Login />
-                            </div>
-                        </div>
-
-
-
-
-                    </div>
-                </div>
-            </div>
-        )
-    }
+    useEffect(() => {
+        const fetchProduct = async () => {
+            try {
+                const response = await axios.get(`${apiUrl}/product/${product_id}`);
+                const productData = response.data.data;
+                setProduct(productData);
+                setSelectedImage(productData.images[0].url);
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchProduct();
+    }, [product_id]);
 
     return (
-      <div>
-            <div>
-                  <Heroone />
-            </div>
+        <div className="min-h-screen">
+            <div><Heroone /></div>
 
-        <div className='flex-col xl:justify-center px-[10px] py-[5px] sm:px-[25px] sm:py-[5px] md:px-[35px] lg:px-[65px] xl:px-[100px] 2xl:justify-center 2xl:gap-[100px] flex items-center justify-between'>
-            
-            <div>
-                <div>
-                    {showmodal && <Mymodal />}
-                </div>
-            </div>
-
-
-            
-            <div className=' flex w-[100%] h-[260px] sm:h-[340px] lg:h-[400px] xl:w-[1000px] 2xl:w-[1200px] selector-image mt-[30px] mb-[30px] '>
-                <div className='w-[50%] h-[260px] sm:h-[340px] lg:h-[400px]  ' >
-                    <div className=' w-[100%] h-[200px] sm:h-[250px] lg:h-[300px] p-1 flex justify-center items-center py-[10px]'>
-                        <img className=' w-[180px] rounded-lg sm:w-[220px] md:w-[240px] lg:w-[260px]' src="https://m.media-amazon.com/images/I/41EZIPoEswL._SX342_SY445_.jpg" alt="" />
+            <div className="grid grid-cols-1 lg:grid-cols-10 gap-4 px-4 py-2 bg-gray-200 lg:h-screen">
+                {showModal && (
+                    <div className="fixed inset-0 z-50">
+                        <LoginModal onClose={() => setShowModal(false)} />
                     </div>
-                    <div className='flex  items-center justify-center gap-[8px] md:gap-[15px] lg:gap-[25px] p-1 py-[10px]'>
-                        <div>
-                            <img className='w-[40px] rounded-md sm:w-[60px] lg:w-[70px] ' src="https://m.media-amazon.com/images/I/71kRS8BlW-L._SL1500_.jpg" alt="" />
-                        </div>
-                        <div>
-                            <img className='w-[40px] rounded-md  sm:w-[60px] lg:w-[70px]' src="https://m.media-amazon.com/images/I/71kRS8BlW-L._SL1500_.jpg" alt="" />
-                        </div>
-                        <div>
-                            <img className='w-[40px] rounded-md sm:w-[60px] lg:w-[70px]' src="https://m.media-amazon.com/images/I/71nFgXwaxQL._SL1500_.jpg" alt="" />
-                        </div>
-                        <div>
-                            <img className='w-[40px] rounded-md sm:w-[60px] lg:w-[70px]' src="https://m.media-amazon.com/images/I/71kRS8BlW-L._SL1500_.jpg" alt="" />
-                        </div>
-                    </div>
-                </div>
-                <div className='w-[50%] h-[auto]  items-center     flex flex-col justify-between'>
-                    <div className='p-1 sm:px-[15px] md:px-[35px] lg:px-[45px] lg:py-[20px] xl:py-[30px] xl:px-[55px] flex flex-col justify-center gap-[5px] sm:gap-[12px]  '>
-                        <div className='flex flex-col gap-[4px]'>
-                            <p className='text-[12px] font-semibold sm:text-[16px] md:text-[17px] lg:text-[18px] 2xl:text-[20px]'>Crompton Night Buddy 0.5 Watt Night Lamp with USB Charging Adapter Port (Cool Day Light) Pack of 1</p>
-                            <p className='text-[9px] sm:text-[12px]'>By Triumph Lights</p>
-                        </div>
+                )}
 
-                        <div className='py-[2px]'>
-                            <div>
-                                <p className='text-[13px] font-regular sm:text-[16px]'>Quantity</p>
-                            </div>
-
-                        </div>
-                        <div className='flex justify-between'>
-                            <div> <p className='text-[15px] font-semibold sm:text-[19px]'>Rs.99/-</p></div>
-                            <div className='flex gap-[5px] items-center'>
-                                <div><p className='text-[13px]  sm:text-[16px]'>Color</p></div>
-                                <div className=' bg-amber-700 w-[10px] h-[10px] rounded-lg'></div>
-                                <div className=' bg-amber-400 w-[10px] h-[10px] rounded-lg'></div>
-                                <div className=' bg-amber-500 w-[10px] h-[10px] rounded-lg'></div>
-
-                            </div>
-                        </div>
-
-
-                        <div>
-                            <div><p className='text-[12px] font-light sm:text-[16px]'>Ratings</p></div>
-                            <div className='flex'>
-                                <div><img className='w-[14px]' src=" products-3.jpg" alt="" /></div>
-                                <div><img className='w-[14px]' src="star.png
-                                 " alt="" /></div>
-                                <div><img className='w-[14px]' src="star.png
-                                 " alt="" /></div>
-                                <div><img className='w-[14px]' src="star.png
-                                 " alt="" /></div>
-                                <div><img className='w-[14px]' src="halfstar.png
-                                 " alt="" /></div>
-                                <div className='flex items-center'>
-                                    <p className='text-[9px]'>4.5</p>
+                {/* Thumbnail and Main Image */}
+                <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-6">
+                    {/* Thumbnails */}
+                    <div className="sm:col-span-1 flex sm:flex-col gap-2 items-center sm:my-2 mx-1">
+                        {loading ? (
+                            <SkeletonLoader className="w-20 h-14 sm:w-18 sm:h-16 md:w-18 md:h-16" />
+                        ) : (
+                            product.images?.map((img, index) => (
+                                <div
+                                    key={index}
+                                    className="w-20 h-14 sm:w-18 sm:h-16 md:w-18 md:h-16 z-10 cursor-pointer md:mb-1 flex justify-center shadow-md border-2 border-gray-200 overflow-hidden"
+                                    onClick={() => setSelectedImage(img.url)}
+                                >
+                                    <div className="relative overflow-hidden">
+                                        <img
+                                            className="w-fit h-cover transition-transform duration-300 hover:scale-110"
+                                            src={img.url}
+                                            alt={`Thumbnail ${index}`}
+                                            loading="lazy"
+                                        />
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            ))
+                        )}
+                    </div>
 
-                        <div className='flex flex-col gap-[5px]'>
-                            <button className='rounded-lg secondary-bg h-[22px] text-white sm:h-[30px] text-[12px]' ><p>Add To Cart</p></button>
+                    {/* Main Image for All Screens */}
+                    <div className="sm:col-span-5 justify-center my-2 mx-1">
+                        {loading ? (
+                            <SkeletonLoader className="h-72 w-full" />
+                        ) : (
+                            <img
+                                className=" w-cover h-cover shadow-md"
+                                src={selectedImage}
+                                alt="Selected Product"
+                            />
+                        )}
+                    </div>
+                </div>
 
-                            <button onClick={() => setshowmodal(true)} className='h-[22px] rounded-lg secondary-bg text-white  text-[12px]  sm:h-[30px]' ><p>Buy Now</p></button>
-                        </div>
+                {/* Product Information */}
+                <div className="lg:col-span-5 sm:my-2 mx-1 lg:overflow-y-auto overflow-hidden">
+                    <div className="bg-white mb-3 shadow-md">
+                        {loading ? (
+                            <ProductInfoSkeleton />
+                        ) : (
+                            <ProductInfo product={product} isLoggedIn={isLoggedIn} />
+                        )}
+                    </div>
 
-
-
+                    <div className="bg-white mb-3">
+                        {loading ? (
+                            <MoreInfoSkeleton />
+                        ) : (
+                            <MoreInfo product={product} />
+                        )}
                     </div>
                 </div>
             </div>
 
-
-
-        </div>
-
-        <div>
             <Herolast />
         </div>
-     </div>
-    )
-}
+    );
+};
 
-export default Productdetails
+export default Productdetails;

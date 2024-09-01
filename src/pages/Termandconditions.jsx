@@ -1,4 +1,6 @@
 import React from 'react'
+import Heroone from '../components/Heroone'
+import Herolast from '../components/Herolast'
 
 const Termandconditions = () => {
     const data=[
@@ -227,9 +229,11 @@ const Termandconditions = () => {
       
     ]
   return (
+    <>
+    <Heroone/>
     <div  className='2xl:flex 2xl:justify-center'>
           <div className='p-4 py-[20px] px-[10px] sm:px-[25px] sm:py-[40px] md:px-[35px] lg:px-[65px] xl:px-[100px] 2xl:w-[1200px] gap-6 flex flex-col'>
-          <div> <p className=' text-center text-[18px] sm:text-[22px] lg:text-[25px] font-regular'>TERM OF SERVICE
+          <div> <p className=' text-center text-3xl font-bold'>Terms And Conditions
           </p></div>
           {data.map((d) => ( 
             <div className='gap-4 flex flex-col   '>
@@ -261,6 +265,9 @@ const Termandconditions = () => {
 
           </div>
     </div>
+    <Herolast/>
+    </>
+    
   )
 }
 
